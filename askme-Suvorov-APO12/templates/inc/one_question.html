@@ -34,7 +34,7 @@
                     <a href={% url 'page_question' question.id %}>
                         Answers
                         <span class="answer-count">
-                            ({{ answers_count }})
+                            ({{ question.answer_set.all | length }})
                         </span>
                     </a>
                 </span>
