@@ -1,0 +1,49 @@
+<div class="right-block">
+	<div class="popular-tags-block block-body">
+		<h4 class="title">
+			Popular tags
+		</h4>
+		<div class="tags">
+			{% for tag in tags %}
+			<p>
+				<a href={% url 'tag_questions' tag.name %} class="tag">
+					{{ tag.name }}
+				</a>
+			</p>
+			{% endfor %}
+		</div>
+	</div>
+
+	<div class="best-members-block block-body">
+		<h4 class="title">
+			Best members
+		</h4>
+
+		<table class="table table-borderless members">
+			<thead>
+				<tr>
+					<th scope="col">№</th>
+					<th scope="col">Name</th>
+					<th scope="col">Rating</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for member in members %}
+				<tr>
+					<th scope="row">{{ forloop.counter }}</th>
+					<td>
+						<a href={% url 'tag_questions' member.name %} class="member">
+							{{ member.name }}
+						</a>
+					</td>
+					<td>
+						{{ member.rating }}
+					</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+	
+
+</div>

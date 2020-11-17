@@ -1,0 +1,26 @@
+{% extends 'inc/base.html' %}
+
+{% load static %}
+
+{% block title %}
+	Log in
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="settings-header block-body">
+	<div class="block-header">
+		<h4>
+			Registration
+		</h4>
+	</div>
+</div>
+
+<div class="settings-body block-body">
+	<div class="ask-block">
+		{% include 'inc/signup_form.html' %}
+	</div>
+</div>
+
+{% endblock content %}

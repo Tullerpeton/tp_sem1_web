@@ -1,0 +1,30 @@
+{% load static %}
+
+<div class="answer-block block-body">
+    <div class="row">
+        <div class="col-2">
+            <div class="user-avatar">
+                <img src={% static "/img/user_avatar.png" %}/ class="avatar-img">
+            </div>
+            <div class="like-counter">
+                <a> 
+                    <img src={% static "/img/unlike_icon.png" %}/ class="unlike-icon like-button">
+                </a>
+                <span>
+                    {{ answer.rating.rating }}
+                </span>
+                <a>
+                    <img src={% static "/img/like_icon.png" %}/ class="like-icon like-button"> 
+                </a>
+            </div>
+        </div>
+        <div class="col-10">
+            <div class="answer-text">
+                {{ answer.text }}
+            </div>
+            <div class="answer-footer">
+                <input type="checkbox" value="correct"> Correct!
+            </div>
+        </div>
+    </div>
+</div>
