@@ -1,0 +1,39 @@
+{% extends 'inc/base.html' %}
+
+{% load static %}
+
+{% block title %}
+	Questions
+{% endblock title %}
+
+
+{% block content %}
+<div class="questions-header block-body">
+	<div class="d-flex align-items-center justify-content-between">
+		<ul class="nav nav-pills d-flex align-items-center text-center profile-forum-items p-0 m-0 w-75">
+
+			<li class="nav-item ol-sm-3 p-0">
+				<a class="nav-link active" href={%url 'home_page'%}>New Questions</a>
+			</li>
+			<li class="nav-item ol-sm-3 p-0">
+				<a class="nav-link" href={%url 'hot_questions'%}>Link</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+
+
+<div class="questions-body">
+	{% for question in questions %}
+		{% include 'inc/one_question.html' %}
+	{% endfor %}
+</div>
+
+<div class="questions-footer">
+	{% include 'inc/paginator.html' with page=questions %}
+</div>
+{% endblock content %}
+
+

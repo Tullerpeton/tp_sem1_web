@@ -1,0 +1,267 @@
+:root {
+  --main-bg-color: #fafafb;
+  --main-color: #777d74;
+  --ref-color: #50b5ff;
+  --active-ref-color: #0b8ce9;
+  --tag-color: #50b5ff;
+  --tag-bg-color: #ddf1ff;
+  --h-color: #3f414d;
+  --active-bg-color: #28a745;
+}
+
+body {
+    background: var(--main-bg-color);
+    color: var(--main-color);
+
+    /* Body font */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+}
+
+h4 {
+	font-size: 1.400em;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin: 0px;
+    line-height: 1.5;
+    color: var(--h-color);
+}
+
+
+a {
+    color: var(--ref-color);
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--active-ref-color);
+}
+
+.block-body {
+    margin: 1em 0em;
+    padding: 0.5em;
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
+    border-radius: 7px;
+}
+
+
+/* Navbar */
+
+.navbar-block {
+    z-index: 999;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-block .collapse{
+    margin: 0 2em 0 1em; 
+}
+
+.navbar-block .user-block {
+    margin-left: auto;
+}
+
+.navbar-block .user-block .user-avatar {
+	height: 5em;
+	width: 5em;
+    padding: 0.1em
+}
+.navbar-block .search-line {
+    width: 36.5em;
+}
+
+.navbar-block .logo {
+    font-size: 300%;
+}
+
+.navbar-block #ask-btn {
+    width: 4.5em;
+}
+
+.navbar-block .user-block-ref {
+    margin-right: 0.6em;
+}
+
+.navbar-block .user-block > .unlogged-user { 
+    display: none; 
+}
+
+.navbar-block .user-block > .logged-user { 
+    display: inline; 
+}
+
+
+
+/* Right block */
+
+.right-block .tag {
+    margin: 0.5em; 
+    padding: 0.5em;
+    color: var(--tag-color);
+    background: var(--tag-bg-color);
+    border-radius: 0.3em; 
+}
+
+.right-block .tags {
+    margin: 1em 0 0.4em 0.5em;
+}
+
+.right-block .title {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.right-block .members {
+    text-align: center;
+}
+
+.right-block .table {
+    color: var(--main-color);
+}
+
+
+
+/* Question */
+
+.question-block .user-avatar,
+.question-block .like-counter {
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.question-block .avatar-img {
+    height: 110px;
+    width: 110px;
+}
+
+.question-block .like-counter > span {
+    display: inline-block;
+    padding: 4px 6px;
+}
+
+.question-block .like-button {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    transform: scale(1, -1);
+}
+
+.question-block .question-footer {
+    position: sticky;
+    margin-top: 5em;
+}
+
+.question-block .tag,
+.author-block .tag {
+    margin: 0.3em; 
+    padding: 0.3em;
+    color: var(--tag-color);
+    background: var(--tag-bg-color);
+    border-radius: 0.3em; 
+}
+
+.question-block .answers {
+    margin-right: 10px;
+}
+
+
+
+
+/* Author block*/
+.author-block .user-avatar,
+.author-block .like-counter {
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.author-block .avatar-img {
+    height: 160px;
+    width: 160px;
+}
+
+.author-block .like-counter > span {
+    display: inline-block;
+    padding: 1px 7px;
+    font-size: 20px;
+}
+
+.author-block .like-button {
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    transform: scale(1, -1);
+}
+
+.author-block .question-footer {
+    position: sticky;
+    margin-top: 8em;
+}
+
+
+/* Answer */
+
+button.button-ask {
+    display: inline-block;
+    height: 2.5em;
+    width: 5em;
+    background-color: #5a8dc3;
+    color:white;
+    border-radius: 7px;
+    margin-left: 15px;
+}
+
+.button-ask:hover {
+	background-color: #117a8b;
+}
+
+.answer-block .answer-footer {
+    position: sticky;
+    margin-top: 3.8em;
+}
+
+.answer-block .answer-text {
+    margin-top: 10px;
+}
+
+.answer-block .like-counter > span {
+    display: inline-block;
+    padding: 4px 6px;
+}
+
+.answer-block .like-button {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    transform: scale(1, -1);
+}
+
+.answer-block .user-avatar .avatar-img {
+    height: 80px;
+    width: 80px;
+}
+
+
+.signup .avatar-img,
+.settings .avatar-img {
+    height: 110px;
+    width: 110px;
+    margin: 1em 2em 2em 0;
+}
+
+
+
+.answers-footer {
+    margin-top: 1em;
+}
+
+.button-answer {
+    margin: 1em 0em;
+}
+
+.ask-block {
+    margin: 1em 1em 0em 1em;
+}

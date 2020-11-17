@@ -1,0 +1,26 @@
+{% extends 'inc/base.html' %}
+
+{% load static %}
+
+{% block title %}
+	Create question
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="settings-header block-body">
+	<div class="block-header">
+		<h4>
+			User settings: Dr. Pepper
+		</h4>
+	</div>
+</div>
+
+<div class="settings-body block-body">
+	<div class="ask-block">
+		{% include 'inc/user_settings.html' %}
+	</div>
+</div>
+
+{% endblock content %}

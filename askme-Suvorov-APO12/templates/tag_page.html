@@ -1,0 +1,30 @@
+{% extends 'inc/base.html' %}
+
+{% load static %}
+
+{% block title %}
+	New Questions
+{% endblock title %}
+
+
+{% block content %}
+<div class="questions-header block-body">
+	<div class="block-header">
+		<h4>
+			Select tag: {{ tag }}
+		</h4>
+	</div>
+</div>
+
+<div class="questions-blocks">
+	{% for question in questions %}
+		{% include 'inc/one_question.html' %}
+	{% endfor %}
+</div>
+
+<div class="questions-footer">
+	{% include 'inc/paginator.html' with page=questions %}
+</div>
+{% endblock content %}
+
+

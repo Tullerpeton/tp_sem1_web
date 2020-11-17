@@ -1,0 +1,27 @@
+<div class="login">
+	<form name="login" method="post" action="login/">
+		<div class="alert alert-danger" role="alert">
+  			Sorry, wrong password!
+		</div>
+		<div class="form-group row">
+			<label for="title-label" class="col-form-label col-2">Login</label>
+			<div class="col-5">
+				<input class="title form-control" placeholder="Enter your login here">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="password-label" class="col-form-label col-2">Password</label>
+			<div class="col-5">
+				<input type="password" class="password form-control" class="title form-control" placeholder="Enter your password">
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="col-3 offset-2">
+				<button type="submit" class="btn btn-primary mb-2">Log in</button>
+				<div>
+					<a href={%url 'signup_page'%} class="user-block-ref">create new account</a>
+				</div>
+			</div>
+		</div>
+	</form>	
+</div>

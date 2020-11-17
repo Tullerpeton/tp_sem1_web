@@ -1,0 +1,64 @@
+{% load static %}
+
+<div class="signup">
+	<form name="signup" method="post" action="signup/">
+		<div class="alert alert-danger" role="alert">
+  			Sorry, this email address allready registred! 
+		</div>
+		<div class="form-group row">
+			<label for="login-label" class="col-form-label col-2">Login</label>
+			<div class="col-5">
+				<input class="login form-control" placeholder="Your login">
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<label for="email-label" class="col-form-label col-2">Email</label>
+			<div class="col-5">
+				<input class="email form-control" placeholder="Your email">
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<label for="nick-label" class="col-form-label col-2">Nick name</label>
+			<div class="col-5">
+				<input class="nick form-control" placeholder="Nick name">
+			</div>
+		</div>
+		
+		<div class="form-group row">
+			<label for="first-password-label" class="col-form-label col-2">Password</label>
+			<div class="col-5">
+				<input type="password" class="first-password form-control" placeholder="Enter your password">
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<label for="second-password-label" class="col-form-label col-2">Password</label>
+			<div class="col-5">
+				<input type="password" class="second-password form-control" placeholder="Repeat your password">
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<label for="avatar-label" class="col-form-label col-2">Upload avatar</label>
+			<div class="col-5">
+				<div class="user-avatar">
+					<img src={% static "/img/user_avatar.png" %}/ class="avatar-img">
+				</div>
+				<div>
+					<div class="custom-file">
+						<input type="file" class="custom-file-input" required>
+						<label class="custom-file-label" for="file-label">Choose file...</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="form-group row">
+			<div class="col-2 offset-2">
+				<button type="submit" class="btn btn-primary mb-2">Register</button>
+			</div>
+		</div>
+	</form>
+</div>

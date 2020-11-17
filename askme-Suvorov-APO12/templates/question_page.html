@@ -1,0 +1,70 @@
+{% extends 'inc/base.html' %}
+
+{% load static %}
+
+{% block title %}
+	Answers
+{% endblock title %}
+
+{% block content %}
+
+<div class="author-block block-body">
+	<div class="row">
+		<div class="col-3">
+			<div id="author-avatar" class="user-avatar">
+				<img src={% static "/img/user_avatar.png" %}/ class="avatar-img">
+			</div>
+			<div class="like-counter">
+				<a> 
+					<img src={% static "/img/unlike_icon.png" %}/ class="unlike-icon like-button">
+				</a>
+				<span>
+					{{ question.rating.rating }}
+				</span>
+				<a>
+					<img src={% static "/img/like_icon.png" %}/ class="like-icon like-button"> 
+				</a>
+			</div>
+		</div>
+		<div class="col-9">
+			<div class="question-title">
+				<h3>
+					{{ question.title }}
+				</h3>
+			</div>
+			<div class="question-text">
+				{{ question.text }}
+			</div>
+			<div class="question-footer">
+				<t class="tags">
+					Tags:
+					<span >
+						{% for tag in question.tags.all %}
+                            <a class="tag" href={% url 'tag_questions' tag %}>  {{ tag.name }}
+                            </a>
+                        {% endfor %}
+					</span>
+				</t>
+
+			</div>
+		</div>
+	</div>
+</div>
+<hr>
+
+<div class="answers-block">
+	{% for answer in answers %}
+		{% include "inc/one_answer.html"%}
+	{% endfor %}
+</div>
+
+
+{% include 'inc/paginator.html' with page=answers %}
+
+<hr>
+
+<div class="answers-footer">
+	{% include 'inc/answer_form.html' %}
+</div>
+
+{% endblock content %}

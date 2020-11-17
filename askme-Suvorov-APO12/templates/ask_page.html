@@ -1,0 +1,26 @@
+{% extends 'inc/base.html' %}
+
+{% load static %}
+
+{% block title %}
+	Create question
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="ask-header block-body">
+	<div class="block-header">
+		<h4>
+			New question
+		</h4>
+	</div>
+</div>
+
+<div class="ask-body block-body">
+	<div class="ask-block">
+		{% include 'inc/ask_form.html' %}
+	</div>
+</div>
+
+{% endblock content %}
